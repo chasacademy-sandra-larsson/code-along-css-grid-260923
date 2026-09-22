@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 18px;
+  padding: 20px;
+}
+
+/* Bara för att se rutorna under passet */
+.layout > * {
+  background-color: #efeae4;
+  border: 1px solid #bbb;
+  padding: 1rem;
+}
+
+
+/* ---------------------------------------------------------------
+   Steg 1: gör behållaren till ett grid
+
+   Tre kolumner och tre rader ger FYRA linjer i varje riktning.
+   Linjerna är det vi placerar saker mellan — inte rutorna.
+
+        1        2        3        4     <- kolumnlinjer
+        |        |        |        |
+      1 +--------+--------+--------+
+        |        |        |        |
+      2 +--------+--------+--------+
+        |        |        |        |
+      3 +--------+--------+--------+
+        |        |        |        |
+      4 +--------+--------+--------+
+        ^
+        radlinjer
+   --------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------------
+   Steg 2: placera med grid-column och grid-row
+
+   Syntaxen är  start / slut  och det är LINJENUMMER, inte antal
+   kolumner. header nedan börjar på linje 1 och slutar på linje 4,
+   alltså över alla tre kolumnerna.
+   --------------------------------------------------------------- */
+
+
+
+/* Steg 3: -1 är sista linjen, oavsett hur många kolumner du har.
+   Skriv så här istället för att räkna om varje gång du lägger
+   till en kolumn. */
+
+
+
+/* Steg 4: nav ligger i första kolumnen, på mittenraden */
+
+
+
+/* Steg 5: span säger "hur många spår", inte "till vilken linje".
+   main börjar på linje 2 och tar två kolumner. */
+
+
+
+/* Steg 6: aside får ingen placering.
+   Den hamnar i nästa lediga ruta av sig själv — grid skapar en
+   IMPLICIT rad när den behöver en. Prova att kommentera bort
+   grid-template-rows ovan och se vad som händer. */
+

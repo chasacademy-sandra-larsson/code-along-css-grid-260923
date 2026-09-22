@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 18px;
+  padding: 20px;
+}
+
+/* Bara för att se rutorna under passet */
+.layout > * {
+  background-color: #efeae4;
+  border: 1px solid #bbb;
+  padding: 1rem;
+}
+
+/* ---------------------------------------------------------------
+   Samma layout som i 1-grid-lines, men utan ett enda linjenummer.
+
+   Steg 1: döp rutorna i grid-template-areas.
+   En rad i citattecken = en rad i gridet. Skriv dem under varandra
+   så blir CSS-koden en karta över sidan.
+   --------------------------------------------------------------- */
+
+
+
+
+
+/* Steg 2: peka ut vilket namn varje item hör till.
+   Ingen start, inget slut, inget span. */
+
+
+
+
+
+
+/* ---------------------------------------------------------------
+   Steg 3: en punkt betyder tom ruta.
+   Prova att byta "nav aside aside" mot "nav . aside" och se hålet.
+   --------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------
+   Steg 4: det här är hela poängen med areas.
+
+   För mobil ritar vi om kartan — en kolumn, allt under varandra.
+   HTML:en rörs inte, och vi behöver inte räkna om några linjer.
+   --------------------------------------------------------------- */
+
+
+
