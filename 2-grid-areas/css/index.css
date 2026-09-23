@@ -27,15 +27,43 @@ body {
    --------------------------------------------------------------- */
 
 
-
+ .layout {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: auto 300px auto auto;
+    gap: 20px;
+    min-width: 400px;
+    grid-template-areas: 
+    "header header header"
+    "nav main main"
+    "nav aside aside"
+    "footer footer footer";
+ }
 
 
 /* Steg 2: peka ut vilket namn varje item hör till.
    Ingen start, inget slut, inget span. */
 
 
+header {
+   grid-area: header;
+}
 
+nav {
+   grid-area: nav;
+}
 
+main {
+   grid-area: main
+}
+
+aside {
+   grid-area: aside;
+}
+
+footer {
+   grid-area: footer;
+}
 
 
 /* ---------------------------------------------------------------
@@ -51,4 +79,22 @@ body {
    --------------------------------------------------------------- */
 
 
+@media (max-width: 600px) {
+   
+   .layout {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      "header"
+      "main"
+      "nav"
+      "aside"
+      "footer";
+   }
+   .layout > * {
+  background-color: purple;
+  color: #fff;
 
+}
+
+
+}

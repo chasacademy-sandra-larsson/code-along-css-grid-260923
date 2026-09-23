@@ -38,6 +38,15 @@ body {
         radlinjer
    --------------------------------------------------------------- */
 
+ .layout {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 200px;
+    grid-template-rows: auto 500px auto;
+    gap: 20px;
+    max-width: 800px;
+    min-width: 400px;
+ }
+
 
 /* ---------------------------------------------------------------
    Steg 2: placera med grid-column och grid-row
@@ -46,22 +55,44 @@ body {
    kolumner. header nedan börjar på linje 1 och slutar på linje 4,
    alltså över alla tre kolumnerna.
    --------------------------------------------------------------- */
-
+header {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
 
 
 /* Steg 3: -1 är sista linjen, oavsett hur många kolumner du har.
    Skriv så här istället för att räkna om varje gång du lägger
    till en kolumn. */
 
+  footer {
+    grid-column:  1 / -1;
+    grid-row: 3 / 4;
+  }
 
 
 /* Steg 4: nav ligger i första kolumnen, på mittenraden */
+
+nav {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
 
 
 
 /* Steg 5: span säger "hur många spår", inte "till vilken linje".
    main börjar på linje 2 och tar två kolumner. */
 
+  
+   main {
+    grid-column: 2 / span 2;
+    grid-row: 2 / 3;
+   }
+
+   aside {
+     grid-column: 4 / -1;
+     grid-row: 2 / 3;
+   }
 
 
 /* Steg 6: aside får ingen placering.
